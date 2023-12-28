@@ -4,7 +4,7 @@ Welcome to the Value Investing Calculator! This tool allows you to perform stock
 
 Give it a try at:
 https://valueinvesting.pythonanywhere.com/
-[![Value Investing Calculator](./assets/value-investing-sc.jpg)](https://valueinvesting.pythonanywhere.com/)
+[![Value Investing Calculator](./assets/value-investing-screenshot.jpg)](https://valueinvesting.pythonanywhere.com/)
 
 
 ## Features
