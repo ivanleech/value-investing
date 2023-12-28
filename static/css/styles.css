@@ -130,4 +130,9 @@ footer {
 footer {
     text-align: center;
     padding: 10px;
+    z-index: 1;
+}
+
+main {
+    margin-bottom: 50px; /* Adjust this value based on the height of your footer */
 }
