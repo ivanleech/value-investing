@@ -1,6 +1,9 @@
-# Stock Valuation Calculator
+# Value Investing Calculator
 
-Welcome to the Stock Valuation Calculator! This tool allows you to perform stock valuation using four different models based on the tickers provided. 
+<!-- insert image -->
+![Value Investing Calculator](./assets/value-investing.jpg)
+
+Welcome to the Value Investing Calculator! This tool allows you to perform stock valuation using four different models based on the tickers provided. 
 
 ## Features
 
@@ -9,10 +12,6 @@ Welcome to the Stock Valuation Calculator! This tool allows you to perform stock
 
 2. **Valuation Models:**
    - The calculator provides four types of valuation models to analyze and estimate the fair value of the selected stocks.
-   - Discounted Cash Flow (DCF)
-   - Benjamin Graham Formula
-   - Peter Lynch Formula
-   - PEGY Ratio
 
 3. **Parameter Toggle:**
    - Toggle between different parameters to customize the valuation models according to your preferences. Adjust parameters to see how they impact the fair value calculation.
