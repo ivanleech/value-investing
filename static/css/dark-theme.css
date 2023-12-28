@@ -1,0 +1,64 @@
+body {
+    background-color: #000;
+    color: #fff; /* Text color */
+}
+
+h1 {
+    color: #ff8c00; /* Orange color */
+}
+
+#calculator-form {
+    background-color: #222; /* Dark background color */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    color: #fff;
+}
+
+input, select {
+    border: 1px solid #444; /* Dark border color */
+    background-color: #333; /* Dark input background color */
+    color: #fff; /* Input text color */
+}
+
+checkbox {
+}
+
+button {
+    background-color: #ff8c00;
+    color: #000;
+}
+
+#result-container {
+}
+
+table {
+}
+
+th, td {
+    border: 1px solid #555; /* Dark border color */
+}
+
+th {
+    background-color: #ff8c00;
+    color: #000;
+}
+
+.tags-container {
+    border: 1px solid #555; /* Dark border color */
+}
+
+.tag {
+    background-color: #ff8c00;
+    color: #000;
+}
+
+.tag-input {
+    background-color: #333; /* Dark input background color */
+    color: #fff; /* Input text color */
+}
+
+.toggle-button {
+    color: #ff8c00; 
+}

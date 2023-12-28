@@ -1,0 +1,58 @@
+body {
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #007bff;
+}
+
+#calculator-form {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    color: #333;
+}
+
+input, select {
+    border: 1px solid #ccc;
+}
+
+checkbox {
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#result-container {
+}
+
+table {
+}
+
+th, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+.tags-container {
+    border: 1px solid #ccc;
+}
+
+.tag {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.tag-input {
+}
+
+.toggle-button {
+    color: #007bff; Adjust the text color
+}

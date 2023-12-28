@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/css/selectize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.0/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link id="theme-style" rel="stylesheet" href="static/css/dark-theme.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.13.3/js/standalone/selectize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="static/js/scripts.js"></script>
+    <script src="static/js/advanced-options-toggle.js"></script>
+    <script src="static/js/theme-toggle.js"></script>
+    
+</head>
+<body>
+    <h1>Stock Valuation Calculator</h1>
+
+    <button id="toggleTheme" class="toggle-button">
+        <span id="themeIcon">☀️</span>
+    </button>
+
+    <div id="result-container"></div>
+    <div id="loading-container">
+        <i class="fas fa-spinner fa-spin"></i> Loading...
+    </div>
+    
+
+    <form id="calculator-form" method="post" action="/calculate">
+        <label for="ticker">Select Tickers:</label>
+        <input type="text" id="ticker" name="ticker" class="tags-input" required value="AAPL,MSFT,PDD">
+
+        <button id="submit" type="submit">Calculate</button>
+        <br><br>
+
+        <!-- Add a down arrow button to toggle advanced options -->
+        <button id="toggleAdvanced" class="toggle-button">Show Advanced Options ▼</button>
+
+        <!-- Advanced Options Section -->
+        <div id="advancedOptions" style="display: none;">
+
+            <header>
+                <h2> Discounted Cashflow </h2>
+            </header>
+
+            <label for="mos_dcf">Margin Of Safety:</label>
+            <input type="text" id="mos_dcf" name="mos_dcf" value="0.5">
+
+            <label for="terminal_growth">Terminal Growth:</label>
+            <input type="text" id="terminal_growth" name="terminal_growth" value="0.02">
+
+            <label for="discount_rate">Discount Rate:</label>
+            <input type="text" id="discount_rate" name="discount_rate" value="0.1">
+
+            <label for="conservative_cagr_factor">Conservative CAGR Factor:</label>
+            <input type="text" id="conservative_cagr_factor" name="conservative_cagr_factor" value="0.8">
+
+            <label for="decreasing_fcf">Decreasing Free Cash Flow:</label>
+            <input type="checkbox" id="decreasing_fcf" name="decreasing_fcf">
+
+            <header> 
+                <h2> Ben Graham Formula </h2>
+            </header>
+
+            <label for="mos_bj">Margin Of Safety:</label>
+            <input type="text" id="mos_bj" name="mos_bj" value="0.5">
+
+            <label for="pe_base">P/E Base</label>
+            <input type="text" id="pe_base" name="pe_base" value="8.5">
+        </div>
+ 
+    </form>
+
+
+</body>
+</html>
