@@ -5,6 +5,10 @@
 
 Welcome to the Value Investing Calculator! This tool allows you to perform stock valuation using four different models based on the tickers provided. 
 
+Give it a try at:
+https://valueinvesting.pythonanywhere.com/
+![Value Investing Calculator](./assets/value-investing-sc.jpg)
+
 ## Features
 
 1. **Ticker Selection:**
