@@ -12,6 +12,7 @@ Welcome to the Value Investing Calculator! This tool allows you to perform stock
 
 2. **Valuation Models:**
    - The calculator provides four types of valuation models to analyze and estimate the fair value of the selected stocks.
+   - Note: Some tickers may not be supported as yahoo finance does not provide the necessary financial info(i.e BTC-USD). If a ticker is not supported, the calculator will skip the valuations and just show the current price.
 
 3. **Parameter Toggle:**
    - Toggle between different parameters to customize the valuation models according to your preferences. Adjust parameters to see how they impact the fair value calculation.
