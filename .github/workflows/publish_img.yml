@@ -7,14 +7,20 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag value-investing:$(date +%s)
+      run: docker build . --file Dockerfile --tag value-investing
+
+    - name: Log in to Docker Hub Registry
+      run: docker login docker.io -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} --password-stdin 
+
+
+    - name: Push the Docker image
+      run: docker tag value-investing ghcr.io/${{ github.repository_owner }}/value-investing
+    - run: docker push ghcr.io/${{ github.repository_owner }}/value-investing
 
   
