@@ -141,7 +141,10 @@ class Model:
         # V = EPS * (8.5 + 2g)
         # https://www.oldschoolvalue.com/stock-valuation/benjamin-graham-formula/
 
-        growth_rate = self.get_growth_estimate(ticker)
+        try:
+            growth_rate = self.get_growth_estimate(ticker)
+        except:
+            growth_rate = 0.05
 
         # get EPS
         eps = yf.Ticker(ticker).info.get("trailingEps")
