@@ -6,7 +6,10 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    print("hello world")
+    # return empty page
+    return render_template("hi.html")
+    # return render_template("index.html")
 
 
 @app.route("/calculate", methods=["POST"])

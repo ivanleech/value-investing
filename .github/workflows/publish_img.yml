@@ -24,3 +24,4 @@ jobs:
     - run: docker push ${{ github.repository_owner }}/value-investing
 
   
+    kubectl run my-pod --image=<your-docker-hub-username>/my-flask-app --port=5000
