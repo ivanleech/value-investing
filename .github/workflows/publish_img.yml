@@ -22,6 +22,3 @@ jobs:
     - name: Push the Docker image
       run: docker tag value-investing ${{ github.repository_owner }}/value-investing
     - run: docker push ${{ github.repository_owner }}/value-investing
-
-  
-    kubectl run my-pod --image=<your-docker-hub-username>/my-flask-app --port=5000
