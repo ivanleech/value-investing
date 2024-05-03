@@ -8,8 +8,9 @@ on:
 permissions:
   contents: read
 
-env: 
-  GITHUB_REPO_NAME: ${{ github.repository_owner }}/value-investing
+env:
+    REPO_NAME: ${{ github.event.repository.name }}
+    REPO_OWNER: ${{ github.repository_owner }}
 
 jobs:
   run-test:
@@ -32,7 +33,7 @@ jobs:
         # stop the build if there are Python syntax errors or undefined names
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        # flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
     - name: Test with pytest
       run: |
@@ -44,13 +45,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag value-investing
+        run: docker build . --file Dockerfile --tag ${{ env.REPO_NAME }}
     
       - name: Log in to Docker Hub Registry
         run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login docker.io -u ${{ secrets.DOCKER_USERNAME }} --password-stdin 
     
       - name: Tag the Docker image
-        run: docker tag value-investing ${{ github.repository_owner }}/value-investing
+        run: docker tag ${{ env.REPO_NAME }} ${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}
 
       - name: Push the Docker image
-        run: docker push ${{ github.repository_owner }}/value-investing
+        run: docker push ${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}
