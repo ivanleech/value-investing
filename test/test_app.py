@@ -9,4 +9,4 @@ class TestApp(unittest.TestCase):
 
     def test_index(self):
         print("should fail")
-        self.assertTrue(True)
+        self.assertTrue(False)
