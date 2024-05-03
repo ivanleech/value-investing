@@ -1,6 +1,5 @@
 import unittest
-from context import models
-from models import Model
+from src.models import Model
 
 
 class TestModel(unittest.TestCase):
