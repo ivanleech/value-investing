@@ -10,7 +10,8 @@ class Model:
 
     def get_current_price(self, ticker):
         hist = yf.Ticker(ticker).history()
-        return hist["Close"][-1]
+        return hist.iloc[-1]["Close"]
+        # return hist["Close"][-1]
 
     def clean_tickers(self, tickers):
         tickers = [ticker.strip() for ticker in tickers]
@@ -30,6 +31,7 @@ class Model:
                 else:
                     valid.add(ticker)
             except Exception as e:
+                print("Error:", e)
                 invalid.add(ticker)
                 continue
         return valid, wo_cashflow, invalid
@@ -143,7 +145,8 @@ class Model:
 
         try:
             growth_rate = self.get_growth_estimate(ticker)
-        except:
+        except Exception as e:
+            print("Error:", e)
             growth_rate = 0.05
 
         # get EPS
@@ -194,7 +197,7 @@ class Model:
 
         # get conservative cagr
         cagr = (df_fcf.iloc[-1] / df_fcf.iloc[0]) ** (1 / len(df_fcf)) - 1
-        decreasing_fcf = df_fcf.iloc[-1] < df_fcf.iloc[0]
+        # decreasing_fcf = df_fcf.iloc[-1] < df_fcf.iloc[0]
         if cagr.imag != 0:
             cagr = cagr.real
         conservative_cagr = cagr * conservative_cagr_factor
