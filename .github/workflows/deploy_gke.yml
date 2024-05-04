@@ -27,6 +27,7 @@ env:
   IMAGE: static-site
 
 jobs:
+  needs: run-test
   setup-build-publish-deploy:
     name: Setup, Build, Publish, and Deploy
     runs-on: ubuntu-latest
