@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: value-app
-        image:  ivanleech/value-investing
+        image: ivanleech/value-investing
         ports:
         - containerPort: 5000
 ---

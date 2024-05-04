@@ -5,3 +5,8 @@ name: value-app
 
 resources:
   - value-app.yaml
+
+images:
+- name: ivanleech/value-investing
+  newName: my.docker.registry.com/my-project/my-app
+  newTag: test
