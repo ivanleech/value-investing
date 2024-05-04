@@ -1,5 +1,4 @@
-name: Docker Image CI
-
+name: 00 deploy img
 on:
   workflow_dispatch
 
