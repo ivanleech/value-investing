@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: value-app
-        image: LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG
+        image: placeholder_img
         ports:
         - containerPort: 5000
 ---
