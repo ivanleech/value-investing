@@ -1,4 +1,4 @@
-name: CICD
+name: Test, Build, Deploy to DockerHub
 on:
   push:
     branches: [ "main" ]
